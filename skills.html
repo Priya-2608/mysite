@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Website🥰</title>
+    <link rel="icon" type="image/png" href="grey heart.png">
+</head>
+<body class = "home">
+    <nav class="menu">
+        <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+        </nav>
+    <div id="skills-container">
+        <div class="skills-left reveal">
+            <h1>Technical skills</h1>
+            <h2>Web Development</h2>
+                <p class="skill-item"> ➣ HTML</p>
+                <p class="skill-item"> ➣ CSS</p>
+                <p class="skill-item"> ➣ Responsive Web Design</p>
+                <h2>Programming</h2>
+                <p class="skill-item"> ➣ JavaScript (Basics)</p>
+                <p class="skill-item"> ➣ Python (Fundamentals)</p>
+                <h2>Database</h2>
+                <p class="skill-item"> ➣ SQL (Basic Queries)</p>
+                <p class = "skill-item"> ➣ MongoDB (Basic Knowledge)</p>
+                <h2>Currently Exploring</h2>
+                <p class="skill-item"> ➣ React</p>
+                <p class="skill-item"> ➣ React Native</p>
+        </div>
+        <div class="skills-right reveal">
+            <h1>Soft skills</h1>
+            <p class="skill-item"> ➣ Communication</p>
+            <p class="skill-item"> ➣ Teamwork</p>
+            <p class="skill-item"> ➣ Problem Solving</p>
+            <p class="skill-item"> ➣ Adaptability</p>
+            <p class="skill-item"> ➣ Leadership</p>
+            <p class="skill-item"> ➣ Fast Learner</p>
+            <p class="skill-item"> ➣ Time Management</p>
+            <p class="skill-item"> ➣ Critical Thinking</p>
+        </div>
+    </div>
+    <div class="skills-bottom reveal">
+        <h1>Archivements</h1>
+        <h2>Sakthi Hackathon Participant – 2025</h2>
+        <p class="skill-item"> ➣ Collaborated with a team to design and present an innovative technical solution within a limited time. Contributed to idea generation, task division, and implementation, improving practical development and teamwork skills.   </p>
+        <h2>Smart India Hackathon (SIH) Participant – 2025</h2>
+        <p class="skill-item"> ➣ Participated in a national-level hackathon and worked on real-world problem statements. Gained hands-on experience in problem-solving, communication, and project development under strict deadlines.</p>
+        <h2>Personal & Academic Project Development – 2025</h2>
+        <p class="skill-item"> ➣ Actively developed small academic and personal projects to strengthen programming knowledge and improve practical understanding of web development, webpage design, and basic application functionality.</p>
+        <div class="proofs-wraper">
+            <a href="projects.html" class="skills-button">View Proofs</a>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="footer-left">
+      <nav>
+        <a href="about.html"><< previous page</a>
+      </nav>
+    </div>
+    <div class="footer-right">
+    <nav>
+      <a href="projects.html">next page>></a>
+    </nav>
+    </div>
+  </div>
+
+<script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+</body>
+</html>

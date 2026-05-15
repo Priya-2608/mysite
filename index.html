@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Website🥰</title>
+    <link rel="icon" type="image/png" href="grey heart.png">
+</head>
+<body class="login">
+    <div class="login-container">
+  <h2 class = "login-header">Login Page</h2>  
+ <form id = "loginform" method="get">
+    <p class ="login-input">Name:<input id = "username" type="text" placeholder="Username" required/></p>
+    <p class ="login-input">Password:<input id = "password" type="password" placeholder="Password" required/></p>
+    <p class = "login-button"><input type="submit" value="Login" /></p>
+  </form>
+  <div id="loginPopup" class="popup-container">
+    <div class="popup-box">
+        <h3>Success!</h3>
+        <p>Login successful. Redirecting to home...</p>
+    </div>
+</div>
+<script>
+    document.getElementById('loginform').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'priya' && password === '1234') {
+        // 1. Show the popup
+        const popup = document.getElementById('loginPopup');
+        popup.classList.add('show-popup');
+
+        // 2. Wait 2 seconds (2000ms) then redirect
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 2000);
+        
+    } else {
+        alert('Invalid username or password. Please try again.');
+    }
+});
+</script>
+</body>
+</html>

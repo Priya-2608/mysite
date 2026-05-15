@@ -1,0 +1,1106 @@
+.login{
+    background-image: url(login.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 5px; 
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-header{
+    text-align: center;
+    color: black;
+    margin-bottom: 15px;
+}
+.login-container
+{
+    background-color:  rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    width : 300px;
+    box-shadow:  rgba(255, 255, 255, 0.6);;
+}
+.login-input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 9px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: rgba(255, 255, 255, 0.6);
+}
+.login-button{
+    text-align: center;
+    width: 100%;
+    padding:10px;
+    border: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+}
+/* Hidden by default */
+.popup-container {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+}
+
+/* The actual message box */
+.popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Class to show the popup */
+.show-popup {
+    display: block;
+}
+.menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  border-top: 15px  rgba(255, 255, 255, 0.6);
+  border-bottom: 15px  rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0px 2px 8px rgba(75, 11, 91, 1.8);
+}
+.menu li{
+  display: inline-block;
+  margin-left: 25px;
+}
+.menu a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+a:hover
+{
+  color: whitesmoke;
+}
+.home
+{
+    background-image: url(home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 125vh;
+    scroll-behavior: smooth;
+
+}
+.home-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 30px solid transparent  ;
+    margin-top: 1%;
+}
+.details
+{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.40);
+    padding-left: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 950px;
+    margin-left: 20px;
+    margin: 0 auto;
+    flex:1;
+    margin-top: 100px;
+}
+.photo 
+{
+    width: 100mm;
+    height: 100mm;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-left:auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-right: 5px;
+    padding: 50px;
+    display: flex;
+    justify-content: right;
+    display:block;
+    position: relative;
+}
+/* ===== HOME TYPING STYLE ===== */
+
+.intro{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.intro-title{
+  font-size: 42px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.name{
+  color: #5a63ff;
+  font-weight: bold;
+}
+
+.typing-line{
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* blinking cursor */
+#typing-text::after{
+  content: "|";
+  margin-left: 6px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
+
+/* ===== ABOUT ME BOX ANIMATION ===== */
+
+/* initial state */
+.about-animate{
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+}
+
+/* when visible */
+.about-animate.active{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: 1.3s ease;
+}
+
+/* soft floating hover effect */
+.details{
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.details:hover{
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.photo img{
+width: 320px;
+height: 380px;
+object-fit: cover;
+border-radius: 18px ;
+box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+transition: 0.3s;
+border:4px double rgba(255, 255, 255, 0.6);
+}
+
+.photo img:hover{
+    transform: scale(1.05);
+}
+
+hr{
+    border: none;
+    border-top: 2px solid black;
+    margin: 20px 0;
+
+}
+.aboutme
+{
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.about
+{
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+}
+.me
+{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-indent: 40px;
+}
+.vertical{
+    display: flex;
+    padding-left: 20px;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+}
+.social{
+    margin-top: 5px;
+    text-align: left to right;
+    border-radius: 50%;
+    gap: 2px;
+    align-items: center;
+    display: flex;
+}
+.social img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.social img:hover{
+    transform: scale(1.2);
+}
+.footer
+{
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.footer a
+{
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer a:hover
+{
+    color: whitesmoke;
+}
+
+/* ===== About Page Layout ===== */
+.education
+{
+    width: min(1200px, 98%);
+    margin: 25px auto 60px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 40px;
+    align-items: start;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* LEFT TOP: About */
+.education-left{
+  background-color: rgba(255, 255, 255, 0.60);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  padding-left: 20px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* LEFT BOTTOM: Education */
+.education-left-box{
+  background-color: rgba(255, 255, 255, 0.60);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* RIGHT: Personal Details (spans both rows) */
+.education-right
+{
+  background-color: rgba(255, 255, 255, 0.60);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  margin-top: 150px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+}
+
+/* ===== Text ===== */
+.education-heading{
+  font-size: 34px;
+  margin-bottom: 12px;
+  color: #222;
+  margin: top 5px;
+  text-decoration: 2px underline;
+}
+
+.education-content
+{
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 10px;
+  text-indent: 40px;
+}
+
+.education-sub{
+  font-size: 22px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #222;
+  text-indent: 20px;
+}
+
+.education-box{
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  color: #222;
+  text-indent: 40px;
+}
+.education-right a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 300px;
+    text-decoration: underline;
+}
+.education-right a:hover
+{
+    color: purple;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 900px){
+  .education{
+    grid-template-columns: 1fr;
+  }
+
+  .education-left,
+  .education-left-box,
+  .education-right{
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .menu{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+
+/*  Skills Page Layout */
+
+#skills-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-left, .skills-right
+{
+    background-color: rgba(255, 255, 255, 0.40);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    margin: 20px;
+    flex:1;
+    min-width: 300px;
+    margin-top: 20px;
+}
+.skills-left h2
+{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: #222;
+    text-indent: 35px;
+}
+.skills-left h1
+{
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #222;
+    text-decoration: 2px underline;
+    padding-left: 20px;
+}
+.skills-right h1
+{
+    font-size: 28px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    color: #222;
+    text-decoration: 2px underline;
+    padding-left: 20px;
+}
+.skills-left p
+{
+    font-size: 18px;
+    line-height: 1;
+    color: #222;
+    margin-bottom: 5px;
+    text-indent: 15px;
+    padding-left: 40px;
+}
+.skills-right p
+{
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #222;
+    text-indent: 15px;
+    padding-left: 40px;
+}
+.skills-bottom
+{
+    background-color: rgba(255, 255, 255, 0.40);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    margin: 15px;
+    max-width: 1800px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.skills-bottom h1
+{
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
+    text-decoration: 2px underline;
+    padding-left: 20px;
+}
+.skills-bottom h2
+{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #222;
+    text-indent: 20px;
+}
+.skills-bottom p
+{
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #222;
+    text-indent: 40px;
+    margin-top: 10px;
+}
+.proofs-wraper{
+  display: flex;
+  justify-content: flex-end;   /* ✅ pushes Proofs to right */
+  margin-top: 18px;
+}
+
+.skills-button{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+/* ===== SKILLS PAGE ANIMATION ===== */
+
+/* main box animation */
+.skills-left.reveal,
+.skills-right.reveal,
+.skills-bottom.reveal{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+.skills-left.reveal.active,
+.skills-right.reveal.active,
+.skills-bottom.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* individual skills appear one-by-one */
+.skill-item{
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.5s ease;
+}
+
+/* when section visible */
+.skills-left.active .skill-item,
+.skills-right.active .skill-item,
+.skills-bottom.active .skill-item{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* delay each line (the magic) */
+.skill-item:nth-child(1){ transition-delay: 0.1s; }
+.skill-item:nth-child(2){ transition-delay: 0.2s; }
+.skill-item:nth-child(3){ transition-delay: 0.3s; }
+.skill-item:nth-child(4){ transition-delay: 0.4s; }
+.skill-item:nth-child(5){ transition-delay: 0.5s; }
+.skill-item:nth-child(6){ transition-delay: 0.6s; }
+
+/* hover glow */
+.skill-item:hover{
+  background: rgba(90,99,255,0.15);
+  border-radius: 8px;
+  padding-left: 8px;
+  cursor: default;
+}
+
+.skills-button:hover 
+{
+    color: purple;
+}
+
+/* resume page layout */
+/* ================== RESUME (SCREEN VIEW) ================== */
+
+/* A4 Sheet look on screen */
+.resume{
+  background: rgba(255, 255, 255, 0.40);
+  width: 794px;               /* A4 width */
+  min-height: 1000px;         /* A4 height-ish for screen */
+  margin: 24px auto;
+  padding: 28px 34px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  border: 2px solid #111;
+}
+
+/* Header */
+.resume-header{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.resume h1{
+  font-size: 38px;
+  margin: 0 0 4px;
+  color: #111;
+}
+
+.resume h2{
+  font-size: 30px;
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #222;
+}
+
+.resume h3{
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.resume a{
+  color: #111;
+  text-decoration: none;
+}
+.resume a:hover{
+  text-decoration: underline;
+}
+
+/* Section headings */
+.resume h4{
+  font-size: 25px;
+  margin: 12px 0 6px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 3px;
+  color: #111;
+}
+
+.resume h5{
+  font-size: 20px;
+  margin: 9px 0 5px;
+  color: #111;
+}
+
+/* Text */
+.resume p{
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 7px;
+  color: #111;
+  text-indent: 55px;
+}
+
+.objective{
+  margin-bottom: 10px;
+}
+
+.meta{
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+/* Lists */
+.resume ul{
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+.resume li{
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 4px;
+}
+
+/* Two column layout */
+.resume-body{
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Skills layout */
+.skills-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.skill-box ul{
+  margin-bottom: 0;
+}
+
+/* Education list */
+.edu{
+  padding-left: 18px;
+}
+
+/* Download button */
+.download-btn{
+  text-align: center;
+  margin: 20px 0;
+}
+
+.download-btn button{
+  background: #222;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn button:hover{
+  background: #444;
+}
+
+
+/* ================== FINAL RESUME PRINT MODE ================== */
+/* ================= FINAL RESUME PRINT MODE (1 PAGE FIX) ================= */
+@media print {
+
+  @page{
+    size: A4;
+    margin: 12mm;
+  }
+
+  /* Hide EVERYTHING in body (removes extra blank pages) */
+  body > *{
+    display: none !important;
+  }
+
+  /* Show only resume */
+  .resume{
+    display: block !important;
+
+    width: 190mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    position: static !important;   /* IMPORTANT: no absolute */
+  }
+
+  /* Hide download button (if it exists) */
+  .download-btn{
+    display: none !important;
+  }
+
+  /* Keep 2 columns in print */
+  .resume-body{
+    display: grid !important;
+    grid-template-columns: 62% 38% !important;
+    gap: 10px !important;
+    align-items: start !important;
+  }
+
+  /* Readable print fonts */
+  .resume h1{ font-size: 45px !important; margin: 0 0 4px !important; }
+  .resume h2{ font-size: 30px !important; margin: 0 0 6px !important; }
+  .resume h3{ font-size: 25px !important; margin: 0 0 10px !important; }
+
+  .resume h4{ font-size: 20px !important; margin: 7px 0 4px !important; padding-bottom: 2px !important; }
+  .resume h5{ font-size: 18px !important; margin: 5px 0 3px !important; }
+
+  .resume p, .resume li{
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .resume ul{
+    margin: 0 0 4px !important;
+    padding-left: 14px !important;
+  }
+
+  /* Avoid awkward breaks */
+  .col, h4, h5, p, ul, li{
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+/* Resume smooth entry */
+.resume{
+  animation: resumeFade 0.6s ease-out;
+}
+
+@keyframes resumeFade{
+  from{ opacity: 0; transform: translateY(10px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+.download-btn button{
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.download-btn button:hover{
+  transform: translateY(-2px);
+}
+@media print{
+  *{
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* projects */
+
+/* ===== HERO ===== */
+.hero{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-title{
+  font-size: 48px;
+  color: black;
+  font-weight: bold;
+}
+
+.hero-sub{
+  font-size: 18px;
+  color: black;
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  width: 85%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.section-title{
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+
+}
+
+.grid-2{
+  grid-template-columns: repeat(2,1fr);
+}
+
+/* ===== PROJECT CARD ===== */
+.card{
+  background: rgba(255,255,255,0.4);
+  padding: 20px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+}
+
+.icon-badge{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card-title{
+  font-size: 22px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.card-text{
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* TECH TAGS */
+.tags span{
+  background: #e7eaff;
+  color: #2f3cff;
+  padding: 6px 12px;
+  border-radius: 15px;
+  margin-right: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.mini-card{
+  background: rgba(255,255,255,0.40);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.mini-card:hover{
+  transform: scale(1.04);
+}
+
+.mini-card h4{
+  color: black;
+  margin-bottom: 8px;
+}
+
+.mini-card p{
+  color: black;
+  font-size: 15px;
+}
+
+/*===== FINAL ====*/
+
+/* ===============================
+   GLOBAL ANIMATIONS (ALL PAGES)
+   Paste at END of style.css
+================================ */
+
+/* Smooth load animation for page sections */
+@keyframes pageFadeIn{
+  from{ opacity: 0; transform: translateY(12px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* Apply to main containers (works even if some pages don't have these) */
+.home-container,
+.education,
+#skills-container,
+.resume,
+.wrap,
+.section,
+.details,
+.skills-left,
+.skills-right,
+.skills-bottom{
+  animation: pageFadeIn 0.6s ease-out both;
+}
+
+/* Smooth hover for cards/boxes */
+.details,
+.education-left,
+.education-left-box,
+.education-right,
+.skills-left,
+.skills-right,
+.skills-bottom,
+.card,
+.mini-card,
+.resume{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.details:hover,
+.education-left:hover,
+.education-left-box:hover,
+.education-right:hover,
+.skills-left:hover,
+.skills-right:hover,
+.skills-bottom:hover,
+.card:hover,
+.mini-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE (ALL PAGES)
+================================ */
+@media (max-width: 900px){
+
+  /* HOME */
+  .home{
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .home-container{
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .details{
+    max-width: 95%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .photo{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo img{
+    width: 85%;
+    height: auto;
+  }
+
+  /* ABOUT page grid -> single column */
+  .education{
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 0 12px;
+  }
+
+  .education-left,
+  .education-left-box,
+  .education-right{
+    margin-top: 0;
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .education-right a{
+    padding-left: 0;
+    display: inline-block;
+  }
+
+  /* SKILLS */
+  #skills-container{
+    flex-direction: column;
+    padding: 0 12px;
+  }
+
+  .skills-left,
+  .skills-right,
+  .skills-bottom{
+    min-width: auto;
+    width: 95%;
+    margin: 12px auto;
+  }
+
+  /* RESUME (screen view) */
+  .resume{
+    width: 95%;
+    padding: 18px;
+  }
+
+  .resume-body{
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+  .grid,
+  .grid-2{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* FOOTER prev/next */
+  .footer{
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px){
+  .menu ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 16px;
+    max-width: 95vw;
+  }
+}
+
+/* Scroll Reveal Animation */
+.reveal{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

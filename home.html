@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title >My Website🥰</title>
+    <link rel="icon" type="image/png" href="grey heart.png">
+</head>
+
+<body class="home">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== INTRO WITH TYPING ANIMATION ===== -->
+    <div class="intro reveal">
+        <h1 class="intro-title">
+            Hi, I'm <span class="name">Priya A</span>
+        </h1>
+
+        <h2 class="typing-line">
+            <span id="typing-text"></span>
+        </h2>
+    </div>
+
+    <p class="me reveal">
+        Welcome to my portfolio. I am passionate about web development and Python programming,
+        and I enjoy building simple web applications while continuously improving my technical skills.
+    </p>
+
+    <!-- ===== HOME CONTENT ===== -->
+    <div class="home-container">
+
+        <!-- CLICK ZOOM BOX -->
+        <div class="details reveal about-animate" id="aboutBox">
+            <h1 class="aboutme">About Me</h1>
+
+            <p class="me">
+                I am Priya A, a B.Tech Information Technology student at Hindusthan College of
+                Engineering and Technology. I have a strong interest in web development and Python
+                programming, and I am also exploring data science and machine learning.
+                I enjoy learning new technologies and building small web projects to improve my
+                practical skills and problem-solving ability.
+            </p>
+        </div>
+
+        <!-- ===== PHOTO ===== -->
+        <div class="photo reveal">
+            <img class="profile-pic" src="me.jpg" alt="Profile Picture">
+
+            <div class="vertical">
+                <a class="social" href="https://github.com/Priya-2608" target="_blank">
+                    <img src="github.png" alt="github"> Git
+                </a>
+
+                <a class="social" href="mailto:priyaprakash.2126@gmail.com" target="_blank">
+                    <img src="mail.png" alt="mail"> Mail
+                </a>
+
+                <a class="social" href="tel:+919345680990" target="_blank">
+                    <img src="phone.png" alt="phone"> Phone
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+        <div class="footer-left">
+            <a>&lt;&lt; previous page</a>
+        </div>
+        <div class="footer-right">
+            <a href="about.html">next page &gt;&gt;</a>
+        </div>
+    </div>
+
+    <!-- OVERLAY FOR ZOOM -->
+    <div class="zoom-overlay" id="zoomOverlay"></div>
+
+    <!-- ===== TYPING SCRIPT ===== -->
+    <script>
+    const texts = [
+        "B.Tech Information Technology Student",
+        "Aspiring Web Developer",
+        "Python & Cloud Learner"
+    ];
+
+    let speed = 70;
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter(){
+        if(charIndex < texts[textIndex].length){
+            document.getElementById("typing-text").innerHTML += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, speed);
+        }else{
+            setTimeout(eraseText, 1400);
+        }
+    }
+
+    function eraseText(){
+        if(charIndex > 0){
+            document.getElementById("typing-text").innerHTML =
+                texts[textIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(eraseText, 40);
+        }else{
+            textIndex++;
+            if(textIndex >= texts.length) textIndex = 0;
+            setTimeout(typeWriter, 400);
+        }
+    }
+
+    window.addEventListener("load", typeWriter);
+    </script>
+
+    <!-- ===== SCROLL REVEAL SCRIPT ===== -->
+    <script>
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 120;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+    </script>
+
+    <!-- ===== CLICK ZOOM SCRIPT (ABOUT ME) ===== -->
+    <script>
+    const aboutBox = document.getElementById("aboutBox");
+    const overlay = document.getElementById("zoomOverlay");
+
+    aboutBox.addEventListener("click", function(){
+        aboutBox.classList.toggle("zoomed");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", function(){
+        aboutBox.classList.remove("zoomed");
+        overlay.classList.remove("show");
+    });
+    </script>
+
+</body>
+</html>

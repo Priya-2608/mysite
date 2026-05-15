@@ -1,0 +1,94 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My Website🥰</title>
+  <link rel="icon" type="image/png" href="grey heart.png">
+</head>
+
+<body class="home">
+  <nav class="menu">
+    <ul >
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+ <main class="education">
+    <!-- LEFT TOP: About -->
+    <section class="education-left">
+      <h1 class="education-heading">About Me</h1>
+      <p class="education-content">
+        I am Priya A, a B.Tech Information Technology student at Hindusthan College of Engineering and Technology.
+        I am passionate about web development and Python programming, and I am currently exploring data science
+        and machine learning. I enjoy learning new technologies and building small web projects to strengthen my
+        practical knowledge and problem-solving skills, with the goal of becoming a software developer.
+      </p>
+    </section>
+
+    <!-- LEFT BOTTOM: Education -->
+    <section class="education-left-box">
+      <h1 class="education-heading">Education</h1>
+
+      <h3 class="education-sub">Bachelor of Technology (Information Technology)</h3>
+      <p class="education-box">Hindusthan College of Engineering and Technology</p>
+      <p class="education-box">Expected Graduation: 2027</p>
+      <p class="education-box">
+        Currently pursuing undergraduate studies with a strong interest in programming and web development, and
+        continuously improving my practical skills through small projects.
+      </p>
+
+      <h3 class="education-sub">Higher Secondary (12th Grade) – 2023</h3>
+      <p class="education-box">Government Higher Secondary School, R. Gobinathampatti, Dharmapuri</p>
+
+      <h3 class="education-sub">Secondary School Leaving Certificate (10th Grade) – 2021</h3>
+      <p class="education-box">Government Higher Secondary School, R. Gobinathampatti, Dharmapuri</p>
+    </section>
+
+    <!-- RIGHT: Personal Details -->
+    <aside class="education-right">
+      <h1 class="education-heading">Personal Details</h1>
+      <p class="education-content">I am currently learning HTML, CSS and basic JavaScript to build responsive web pages. I am also practicing Python programming and problem-solving to improve my coding skills. My goal is to become a software developer and gain practical experience in web technologies.</p>
+      <a class="more-link" href="skills.html">view more</a>
+    </aside>
+  </main>
+  <div class="footer">
+    <div class="footer-left">
+      <nav>
+        <a href="home.html"><< previous page</a>
+      </nav>
+    </div>
+    <div class="footer-right">
+    <nav>
+      <a href="skills.html">next page>></a>
+    </nav>
+    </div>
+  </div>
+
+  <script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>
